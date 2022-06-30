@@ -28,11 +28,11 @@ const cartSlice = createSlice({
     },
     removeFromCart: () => {},
     setShowCart: (state) => {
-      state.showCart = true
+      state.showCart = !state.showCart
     },
   }
 })
 
-export const { addToCart, setShowCart } = cartSlice.actions
+export const { addToCart, setShowCart, removeFromCart } = cartSlice.actions
 
 export default cartSlice.reducer
